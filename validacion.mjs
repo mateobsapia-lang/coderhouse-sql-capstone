@@ -1,0 +1,33 @@
+import { PGlite } from '@electric-sql/pglite';
+import { readFile, writeFile } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const root = new URL('./', import.meta.url);
+const db = new PGlite();
+await db.waitReady;
+const version = (await db.query('SELECT version()')).rows[0].version;
+const structure = await readFile(new URL('estructura.sql',root),'utf8');
+const analysis = await readFile(new URL('analisis.sql',root),'utf8');
+await db.exec(structure);
+// Una segunda ejecución verifica que el proyecto sea reproducible.
+await db.exec(structure);
+const results = await db.exec(analysis);
+const queries = results.filter(r=>r.fields.length>0);
+assert.equal(queries.length,8);
+const scalar=async(q)=>(await db.query(q)).rows[0].n;
+assert.equal(await scalar('SELECT COUNT(*)::int n FROM pedidos_raw'),123);
+assert.equal(await scalar('SELECT COUNT(*)::int n FROM pedidos'),120);
+assert.equal(await scalar('SELECT COUNT(*)::int n FROM rechazos'),3);
+assert.equal(await scalar('SELECT COUNT(*)::int n FROM ventas_validas'),110);
+assert.equal(await scalar('SELECT COUNT(*)::int n FROM pedidos WHERE fecha IS NULL OR precio_unitario IS NULL'),0);
+assert.equal(await scalar('SELECT COUNT(*)::int n FROM pedidos WHERE precio_recuperado'),7);
+assert.equal(await scalar('SELECT COUNT(*)::int n FROM pedidos WHERE fecha_recuperada'),3);
+assert.equal(queries[1].rows.length,6);
+assert.equal(queries[4].rows.length,18);
+assert.equal(queries[5].rows.length,2);
+assert.equal(Number(queries[2].rows[0].unidades),0);
+// Una FK inválida debe rechazarse, no crear una venta huérfana.
+await assert.rejects(db.exec("INSERT INTO pedidos(pedido_id,cliente_id,producto_id,fecha,cantidad,precio_unitario,descuento,estado,precio_recuperado,fecha_recuperada) VALUES(999,999,1,'2026-01-01',1,1,0,'completado',false,false)"));
+const output={engine:version,validation:'PASS: 8 consultas, segunda ejecución, conteos, nulos, calendario, ceros y FK',queries:queries.map((r,i)=>({query:'Q'+(i+1),rows:r.rows}))};
+await writeFile(new URL('resultados.json',root),JSON.stringify(output,null,2));
+console.log(JSON.stringify({engine:version,validation:output.validation,queries:output.queries.filter(q=>!['Q4','Q5'].includes(q.query))},null,2));
+await db.close();

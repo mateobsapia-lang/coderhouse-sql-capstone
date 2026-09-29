@@ -1,0 +1,1228 @@
+{
+  "engine": "PostgreSQL 18.3 (PGlite 0.5.8) on wasm32-unknown-emscripten, compiled by emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.74 (1092ec30a3fb1d46b1782ff1b4db5094d3d06ae5), 32-bit",
+  "validation": "PASS: 8 consultas, segunda ejecución, conteos, nulos, calendario, ceros y FK",
+  "queries": [
+    {
+      "query": "Q1",
+      "rows": [
+        {
+          "cliente_id": 9,
+          "nombre": "Cliente ficticio 09",
+          "pedidos": 11,
+          "gasto_total": "147000.00",
+          "porcentaje_ingresos": "11.08"
+        },
+        {
+          "cliente_id": 10,
+          "nombre": "Cliente ficticio 10",
+          "pedidos": 11,
+          "gasto_total": "143500.00",
+          "porcentaje_ingresos": "10.82"
+        },
+        {
+          "cliente_id": 8,
+          "nombre": "Cliente ficticio 08",
+          "pedidos": 11,
+          "gasto_total": "140000.00",
+          "porcentaje_ingresos": "10.56"
+        },
+        {
+          "cliente_id": 7,
+          "nombre": "Cliente ficticio 07",
+          "pedidos": 11,
+          "gasto_total": "139000.00",
+          "porcentaje_ingresos": "10.48"
+        },
+        {
+          "cliente_id": 3,
+          "nombre": "Cliente ficticio 03",
+          "pedidos": 11,
+          "gasto_total": "136500.00",
+          "porcentaje_ingresos": "10.29"
+        }
+      ]
+    },
+    {
+      "query": "Q2",
+      "rows": [
+        {
+          "mes": "2026-01-01T00:00:00.000Z",
+          "pedidos": 11,
+          "ventas": "120500.00",
+          "ticket_promedio": "10954.55",
+          "variacion_porcentual": null,
+          "acumulado": "120500.00"
+        },
+        {
+          "mes": "2026-02-01T00:00:00.000Z",
+          "pedidos": 15,
+          "ventas": "170850.00",
+          "ticket_promedio": "11390.00",
+          "variacion_porcentual": "41.78",
+          "acumulado": "291350.00"
+        },
+        {
+          "mes": "2026-03-01T00:00:00.000Z",
+          "pedidos": 16,
+          "ventas": "214250.00",
+          "ticket_promedio": "13390.63",
+          "variacion_porcentual": "25.40",
+          "acumulado": "505600.00"
+        },
+        {
+          "mes": "2026-04-01T00:00:00.000Z",
+          "pedidos": 20,
+          "ventas": "260600.00",
+          "ticket_promedio": "13030.00",
+          "variacion_porcentual": "21.63",
+          "acumulado": "766200.00"
+        },
+        {
+          "mes": "2026-05-01T00:00:00.000Z",
+          "pedidos": 22,
+          "ventas": "242800.00",
+          "ticket_promedio": "11036.36",
+          "variacion_porcentual": "-6.83",
+          "acumulado": "1009000.00"
+        },
+        {
+          "mes": "2026-06-01T00:00:00.000Z",
+          "pedidos": 26,
+          "ventas": "317200.00",
+          "ticket_promedio": "12200.00",
+          "variacion_porcentual": "30.64",
+          "acumulado": "1326200.00"
+        }
+      ]
+    },
+    {
+      "query": "Q3",
+      "rows": [
+        {
+          "producto_id": 9,
+          "nombre": "Cepillo premium",
+          "unidades": 0,
+          "pedidos": 0,
+          "ingresos": "0"
+        },
+        {
+          "producto_id": 7,
+          "nombre": "Shampoo neutro",
+          "unidades": 25,
+          "pedidos": 13,
+          "ingresos": "136950.00"
+        },
+        {
+          "producto_id": 8,
+          "nombre": "Arena sanitaria",
+          "unidades": 26,
+          "pedidos": 13,
+          "ingresos": "179900.00"
+        }
+      ]
+    },
+    {
+      "query": "Q4",
+      "rows": [
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 23,
+          "fecha": "2026-02-11T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "18000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 47,
+          "fecha": "2026-04-01T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "18000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 71,
+          "fecha": "2026-05-03T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "18000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 119,
+          "fecha": "2026-06-27T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "18000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 95,
+          "fecha": "2026-06-03T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "16200.00",
+          "ranking_categoria": 5
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 68,
+          "fecha": "2026-04-22T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "13500.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 92,
+          "fecha": "2026-05-24T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "13500.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 116,
+          "fecha": "2026-06-24T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "13500.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 20,
+          "fecha": "2026-02-08T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "12150.00",
+          "ranking_categoria": 9
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 7,
+          "fecha": "2026-01-07T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "12000.00",
+          "ranking_categoria": 10
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 31,
+          "fecha": "2026-03-03T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "12000.00",
+          "ranking_categoria": 10
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 79,
+          "fecha": "2026-05-11T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "12000.00",
+          "ranking_categoria": 10
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 103,
+          "fecha": "2026-06-11T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "12000.00",
+          "ranking_categoria": 10
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 17,
+          "fecha": "2026-02-05T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "10500.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 41,
+          "fecha": "2026-03-13T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "10500.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 89,
+          "fecha": "2026-05-21T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "10500.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 113,
+          "fecha": "2026-06-21T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "10500.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 65,
+          "fecha": "2026-04-19T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "9450.00",
+          "ranking_categoria": 18
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 4,
+          "fecha": "2026-01-04T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "9000.00",
+          "ranking_categoria": 19
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 28,
+          "fecha": "2026-02-16T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "9000.00",
+          "ranking_categoria": 19
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 52,
+          "fecha": "2026-04-06T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "9000.00",
+          "ranking_categoria": 19
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 76,
+          "fecha": "2026-05-08T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "9000.00",
+          "ranking_categoria": 19
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 100,
+          "fecha": "2026-06-08T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "8100.00",
+          "ranking_categoria": 23
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 1,
+          "fecha": "2026-01-01T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "7000.00",
+          "ranking_categoria": 24
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 49,
+          "fecha": "2026-04-03T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "7000.00",
+          "ranking_categoria": 24
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 73,
+          "fecha": "2026-05-05T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "7000.00",
+          "ranking_categoria": 24
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 97,
+          "fecha": "2026-06-05T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "7000.00",
+          "ranking_categoria": 24
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 25,
+          "fecha": "2026-02-13T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "6300.00",
+          "ranking_categoria": 28
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 39,
+          "fecha": "2026-03-11T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "6000.00",
+          "ranking_categoria": 29
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 63,
+          "fecha": "2026-04-17T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "6000.00",
+          "ranking_categoria": 29
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 87,
+          "fecha": "2026-05-19T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "6000.00",
+          "ranking_categoria": 29
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 111,
+          "fecha": "2026-06-19T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "6000.00",
+          "ranking_categoria": 29
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 15,
+          "fecha": "2026-02-03T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "5400.00",
+          "ranking_categoria": 33
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 12,
+          "fecha": "2026-01-12T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "4500.00",
+          "ranking_categoria": 34
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 36,
+          "fecha": "2026-03-08T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "4500.00",
+          "ranking_categoria": 34
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 84,
+          "fecha": "2026-05-16T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "4500.00",
+          "ranking_categoria": 34
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 108,
+          "fecha": "2026-06-16T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "4500.00",
+          "ranking_categoria": 34
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 60,
+          "fecha": "2026-04-14T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "4050.00",
+          "ranking_categoria": 38
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 9,
+          "fecha": "2026-01-09T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "3500.00",
+          "ranking_categoria": 39
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 57,
+          "fecha": "2026-04-11T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "3500.00",
+          "ranking_categoria": 39
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 81,
+          "fecha": "2026-05-13T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "3500.00",
+          "ranking_categoria": 39
+        },
+        {
+          "categoria": "Accesorios",
+          "pedido_id": 105,
+          "fecha": "2026-06-13T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "3500.00",
+          "ranking_categoria": 39
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 8,
+          "fecha": "2026-01-08T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "36000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 32,
+          "fecha": "2026-03-04T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "36000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 56,
+          "fecha": "2026-04-10T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "36000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 104,
+          "fecha": "2026-06-12T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "36000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 80,
+          "fecha": "2026-05-12T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "32400.00",
+          "ranking_categoria": 5
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 16,
+          "fecha": "2026-02-04T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "24000.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 29,
+          "fecha": "2026-03-01T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "24000.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 53,
+          "fecha": "2026-04-07T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "24000.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 64,
+          "fecha": "2026-04-18T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "24000.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 101,
+          "fecha": "2026-06-09T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "24000.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 112,
+          "fecha": "2026-06-20T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "24000.00",
+          "ranking_categoria": 6
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 5,
+          "fecha": "2026-01-05T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "21600.00",
+          "ranking_categoria": 12
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 40,
+          "fecha": "2026-03-12T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "21600.00",
+          "ranking_categoria": 12
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 13,
+          "fecha": "2026-02-01T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "16000.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 37,
+          "fecha": "2026-03-09T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "16000.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 61,
+          "fecha": "2026-04-15T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "16000.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 109,
+          "fecha": "2026-06-17T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "16000.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 85,
+          "fecha": "2026-05-17T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "14400.00",
+          "ranking_categoria": 18
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 24,
+          "fecha": "2026-02-12T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "12000.00",
+          "ranking_categoria": 19
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 48,
+          "fecha": "2026-04-02T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "12000.00",
+          "ranking_categoria": 19
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 72,
+          "fecha": "2026-05-04T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "12000.00",
+          "ranking_categoria": 19
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 96,
+          "fecha": "2026-06-04T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "12000.00",
+          "ranking_categoria": 19
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 120,
+          "fecha": "2026-06-28T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "10800.00",
+          "ranking_categoria": 23
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 2,
+          "fecha": "2026-01-02T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "9000.00",
+          "ranking_categoria": 24
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 26,
+          "fecha": "2026-02-14T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "9000.00",
+          "ranking_categoria": 24
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 74,
+          "fecha": "2026-05-06T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "9000.00",
+          "ranking_categoria": 24
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 98,
+          "fecha": "2026-06-06T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "9000.00",
+          "ranking_categoria": 24
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 50,
+          "fecha": "2026-04-04T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "8100.00",
+          "ranking_categoria": 28
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 21,
+          "fecha": "2026-02-09T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "8000.00",
+          "ranking_categoria": 29
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 69,
+          "fecha": "2026-05-01T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "8000.00",
+          "ranking_categoria": 29
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 93,
+          "fecha": "2026-06-01T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "8000.00",
+          "ranking_categoria": 29
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 117,
+          "fecha": "2026-06-25T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "8000.00",
+          "ranking_categoria": 29
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 45,
+          "fecha": "2026-03-17T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "7200.00",
+          "ranking_categoria": 33
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 34,
+          "fecha": "2026-03-06T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "6000.00",
+          "ranking_categoria": 34
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 58,
+          "fecha": "2026-04-12T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "6000.00",
+          "ranking_categoria": 34
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 82,
+          "fecha": "2026-05-14T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "6000.00",
+          "ranking_categoria": 34
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 106,
+          "fecha": "2026-06-14T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "6000.00",
+          "ranking_categoria": 34
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 10,
+          "fecha": "2026-01-10T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "5400.00",
+          "ranking_categoria": 38
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 18,
+          "fecha": "2026-02-06T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "3000.00",
+          "ranking_categoria": 39
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 42,
+          "fecha": "2026-03-14T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "3000.00",
+          "ranking_categoria": 39
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 114,
+          "fecha": "2026-06-22T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "3000.00",
+          "ranking_categoria": 39
+        },
+        {
+          "categoria": "Alimentos",
+          "pedido_id": 90,
+          "fecha": "2026-05-22T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "2700.00",
+          "ranking_categoria": 42
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 35,
+          "fecha": "2026-03-07T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "21000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 59,
+          "fecha": "2026-04-13T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "21000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 83,
+          "fecha": "2026-05-15T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "21000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 107,
+          "fecha": "2026-06-15T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "21000.00",
+          "ranking_categoria": 1
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 14,
+          "fecha": "2026-02-02T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "16500.00",
+          "ranking_categoria": 5
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 38,
+          "fecha": "2026-03-10T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "16500.00",
+          "ranking_categoria": 5
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 62,
+          "fecha": "2026-04-16T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "16500.00",
+          "ranking_categoria": 5
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 86,
+          "fecha": "2026-05-18T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "16500.00",
+          "ranking_categoria": 5
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 19,
+          "fecha": "2026-02-07T00:00:00.000Z",
+          "cliente": "Cliente ficticio 08",
+          "importe_neto": "14000.00",
+          "ranking_categoria": 9
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 43,
+          "fecha": "2026-03-15T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "14000.00",
+          "ranking_categoria": 9
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 67,
+          "fecha": "2026-04-21T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "14000.00",
+          "ranking_categoria": 9
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 91,
+          "fecha": "2026-05-23T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "14000.00",
+          "ranking_categoria": 9
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 115,
+          "fecha": "2026-06-23T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "12600.00",
+          "ranking_categoria": 13
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 46,
+          "fecha": "2026-03-18T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "11000.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 70,
+          "fecha": "2026-05-02T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "11000.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 94,
+          "fecha": "2026-06-02T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "11000.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 118,
+          "fecha": "2026-06-26T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "11000.00",
+          "ranking_categoria": 14
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 3,
+          "fecha": "2026-01-03T00:00:00.000Z",
+          "cliente": "Cliente ficticio 10",
+          "importe_neto": "7000.00",
+          "ranking_categoria": 18
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 27,
+          "fecha": "2026-02-15T00:00:00.000Z",
+          "cliente": "Cliente ficticio 02",
+          "importe_neto": "7000.00",
+          "ranking_categoria": 18
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 51,
+          "fecha": "2026-04-05T00:00:00.000Z",
+          "cliente": "Cliente ficticio 04",
+          "importe_neto": "7000.00",
+          "ranking_categoria": 18
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 75,
+          "fecha": "2026-05-07T00:00:00.000Z",
+          "cliente": "Cliente ficticio 06",
+          "importe_neto": "6300.00",
+          "ranking_categoria": 21
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 6,
+          "fecha": "2026-01-06T00:00:00.000Z",
+          "cliente": "Cliente ficticio 09",
+          "importe_neto": "5500.00",
+          "ranking_categoria": 22
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 54,
+          "fecha": "2026-04-08T00:00:00.000Z",
+          "cliente": "Cliente ficticio 03",
+          "importe_neto": "5500.00",
+          "ranking_categoria": 22
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 78,
+          "fecha": "2026-05-10T00:00:00.000Z",
+          "cliente": "Cliente ficticio 05",
+          "importe_neto": "5500.00",
+          "ranking_categoria": 22
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 102,
+          "fecha": "2026-06-10T00:00:00.000Z",
+          "cliente": "Cliente ficticio 07",
+          "importe_neto": "5500.00",
+          "ranking_categoria": 22
+        },
+        {
+          "categoria": "Higiene",
+          "pedido_id": 30,
+          "fecha": "2026-03-02T00:00:00.000Z",
+          "cliente": "Cliente ficticio 01",
+          "importe_neto": "4950.00",
+          "ranking_categoria": 26
+        }
+      ]
+    },
+    {
+      "query": "Q5",
+      "rows": [
+        {
+          "mes": "2026-01-01T00:00:00.000Z",
+          "categoria": "Alimentos",
+          "ventas": "72000.00",
+          "ranking_mes": 1,
+          "acumulado": "72000.00",
+          "promedio_mensual": "104200.00",
+          "comparativa": "Por debajo"
+        },
+        {
+          "mes": "2026-01-01T00:00:00.000Z",
+          "categoria": "Accesorios",
+          "ventas": "36000.00",
+          "ranking_mes": 2,
+          "acumulado": "36000.00",
+          "promedio_mensual": "64025.00",
+          "comparativa": "Por debajo"
+        },
+        {
+          "mes": "2026-01-01T00:00:00.000Z",
+          "categoria": "Higiene",
+          "ventas": "12500.00",
+          "ranking_mes": 3,
+          "acumulado": "12500.00",
+          "promedio_mensual": "52808.33",
+          "comparativa": "Por debajo"
+        },
+        {
+          "mes": "2026-02-01T00:00:00.000Z",
+          "categoria": "Alimentos",
+          "ventas": "72000.00",
+          "ranking_mes": 1,
+          "acumulado": "144000.00",
+          "promedio_mensual": "104200.00",
+          "comparativa": "Por debajo"
+        },
+        {
+          "mes": "2026-02-01T00:00:00.000Z",
+          "categoria": "Accesorios",
+          "ventas": "61350.00",
+          "ranking_mes": 2,
+          "acumulado": "97350.00",
+          "promedio_mensual": "64025.00",
+          "comparativa": "Por debajo"
+        },
+        {
+          "mes": "2026-02-01T00:00:00.000Z",
+          "categoria": "Higiene",
+          "ventas": "37500.00",
+          "ranking_mes": 3,
+          "acumulado": "50000.00",
+          "promedio_mensual": "52808.33",
+          "comparativa": "Por debajo"
+        },
+        {
+          "mes": "2026-03-01T00:00:00.000Z",
+          "categoria": "Alimentos",
+          "ventas": "113800.00",
+          "ranking_mes": 1,
+          "acumulado": "257800.00",
+          "promedio_mensual": "104200.00",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-03-01T00:00:00.000Z",
+          "categoria": "Higiene",
+          "ventas": "67450.00",
+          "ranking_mes": 2,
+          "acumulado": "117450.00",
+          "promedio_mensual": "52808.33",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-03-01T00:00:00.000Z",
+          "categoria": "Accesorios",
+          "ventas": "33000.00",
+          "ranking_mes": 3,
+          "acumulado": "130350.00",
+          "promedio_mensual": "64025.00",
+          "comparativa": "Por debajo"
+        },
+        {
+          "mes": "2026-04-01T00:00:00.000Z",
+          "categoria": "Alimentos",
+          "ventas": "126100.00",
+          "ranking_mes": 1,
+          "acumulado": "383900.00",
+          "promedio_mensual": "104200.00",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-04-01T00:00:00.000Z",
+          "categoria": "Accesorios",
+          "ventas": "70500.00",
+          "ranking_mes": 2,
+          "acumulado": "200850.00",
+          "promedio_mensual": "64025.00",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-04-01T00:00:00.000Z",
+          "categoria": "Higiene",
+          "ventas": "64000.00",
+          "ranking_mes": 3,
+          "acumulado": "181450.00",
+          "promedio_mensual": "52808.33",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-05-01T00:00:00.000Z",
+          "categoria": "Alimentos",
+          "ventas": "84500.00",
+          "ranking_mes": 1,
+          "acumulado": "468400.00",
+          "promedio_mensual": "104200.00",
+          "comparativa": "Por debajo"
+        },
+        {
+          "mes": "2026-05-01T00:00:00.000Z",
+          "categoria": "Accesorios",
+          "ventas": "84000.00",
+          "ranking_mes": 2,
+          "acumulado": "284850.00",
+          "promedio_mensual": "64025.00",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-05-01T00:00:00.000Z",
+          "categoria": "Higiene",
+          "ventas": "74300.00",
+          "ranking_mes": 3,
+          "acumulado": "255750.00",
+          "promedio_mensual": "52808.33",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-06-01T00:00:00.000Z",
+          "categoria": "Alimentos",
+          "ventas": "156800.00",
+          "ranking_mes": 1,
+          "acumulado": "625200.00",
+          "promedio_mensual": "104200.00",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-06-01T00:00:00.000Z",
+          "categoria": "Accesorios",
+          "ventas": "99300.00",
+          "ranking_mes": 2,
+          "acumulado": "384150.00",
+          "promedio_mensual": "64025.00",
+          "comparativa": "Por encima"
+        },
+        {
+          "mes": "2026-06-01T00:00:00.000Z",
+          "categoria": "Higiene",
+          "ventas": "61100.00",
+          "ranking_mes": 3,
+          "acumulado": "316850.00",
+          "promedio_mensual": "52808.33",
+          "comparativa": "Por encima"
+        }
+      ]
+    },
+    {
+      "query": "Q6",
+      "rows": [
+        {
+          "cliente_id": 11,
+          "nombre": "Cliente ficticio 11",
+          "gasto_total": "0"
+        },
+        {
+          "cliente_id": 12,
+          "nombre": "Cliente ficticio 12",
+          "gasto_total": "0"
+        }
+      ]
+    },
+    {
+      "query": "Q7",
+      "rows": [
+        {
+          "pedidos_completados": 110,
+          "unidades": 219,
+          "ingreso_neto": "1326200.00",
+          "ingreso_con_precio_recuperado": "74900.00",
+          "porcentaje_ingreso_recuperado": "5.65",
+          "fechas_recuperadas": 3
+        }
+      ]
+    },
+    {
+      "query": "Q8",
+      "rows": [
+        {
+          "categoria": "Alimentos",
+          "unidades": 84,
+          "ingresos": "625200.00",
+          "porcentaje": "47.14"
+        },
+        {
+          "categoria": "Accesorios",
+          "unidades": 84,
+          "ingresos": "384150.00",
+          "porcentaje": "28.97"
+        },
+        {
+          "categoria": "Higiene",
+          "unidades": 51,
+          "ingresos": "316850.00",
+          "porcentaje": "23.89"
+        }
+      ]
+    }
+  ]
+}
